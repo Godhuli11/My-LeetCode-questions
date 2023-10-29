@@ -45,9 +45,8 @@ public:
             return oddh;
         }
         
-        event->next=NULL;
         oddt->next=evenh;
-        
+        event->next=NULL;
         return oddh;
     }
 };
