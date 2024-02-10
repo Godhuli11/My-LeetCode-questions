@@ -40,8 +40,11 @@ public:
             }
         }
 
-        // Find the maximum distance from source to any other node
-        int maxDist = *max_element(dist.begin() + 1, dist.end());
+        int maxDist = INT_MIN;
+         
+         for(int i=1; i<dist.size() ; i++){
+             maxDist = max(maxDist , dist[i]);
+         }
 
         // Check if all nodes are reachable
         return (maxDist == INT_MAX) ? -1 : maxDist;
