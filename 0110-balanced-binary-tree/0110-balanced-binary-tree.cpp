@@ -29,8 +29,6 @@ public:
     bool isBalanced(TreeNode* root) {
        int ans = solve(root);
         
-       if(ans==-1) return false;
-        
-       return true;
+        return (ans==-1) ? false : true;
     }
 };
