@@ -17,7 +17,7 @@
 //         }
 //         TreeNode* root = new TreeNode(preorder[start]);
 //         int i = start;
-//         for( ; i < end ; i++){
+//         for( ; i <= end ; i++){
 //             if(preorder[i]>preorder[start]){
 //                 break;
 //             }
@@ -61,7 +61,7 @@ public:
         start++;  // Move to the next element in preorder
 
         root->left = solve(preorder, start, i - 1, size);
-        root->right = solve(preorder, start, end, size);
+        root->right = solve(preorder, i, end, size);
 
         return root;
     }
