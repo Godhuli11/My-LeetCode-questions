@@ -36,9 +36,8 @@ public:
         
     }
     void recoverTree(TreeNode* root) {
-        first=middle=last=NULL;
-        
-        prev = NULL;
+        first=middle=last=prev=NULL;
+
         
         inorder(root);
         
