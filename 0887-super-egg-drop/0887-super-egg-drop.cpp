@@ -21,7 +21,7 @@ public:
 //         }
         int l = 1;
         int h = f;
-        int temp = 0;
+        //int temp = 0;
         
         
         
@@ -30,7 +30,7 @@ public:
             int mid=(l+h)/2;
             int left=solve(e-1,mid-1,dp);   //egg broken check for down floors of mid
             int right=solve(e,f-mid,dp) ;   // not broken check for up floors of mid
-            temp=1+max(left,right);          //store max of both 
+            int temp=1+max(left,right);          //store max of both 
             if(left<right){                  //since right is more than left and we need more in worst case 
               l=mid+1;                       // so l=mid+1 to gain more temp for worst case : upward
             }
