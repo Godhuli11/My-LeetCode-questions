@@ -13,7 +13,7 @@ public:
         }
         
         int minP = penalty;
-        int minH = 0;
+        int minH =  0;
         
         for(int i=0 ; i<n ; i++){
             
