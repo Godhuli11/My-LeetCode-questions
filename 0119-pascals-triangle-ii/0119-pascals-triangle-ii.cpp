@@ -3,7 +3,7 @@ public:
     vector<int> getRow(int rowIndex) {
         vector<int> prev;
         
-        for(int i=0 ; i<rowIndex+1 ; i++){
+        for(int i=0 ; i<=rowIndex ; i++){
             
             vector<int> curr(i+1,1);
             
