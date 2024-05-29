@@ -6,30 +6,20 @@ public:
         
         vector<int> result(n);
         
-        vector<int> prefix(n);
+        int sum = accumulate(nums.begin(),nums.end(),0);
         
-         prefix[0]=nums[0];
-        
-        for(int i=1 ; i<n ; i++){
-            
-            prefix[i] = prefix[i-1] + nums[i];
-            
-        }
-        
-       
+        int prefixSum = 0;
         
         for(int i=0 ; i<n ; i++){
+               
+             int leftSum = prefixSum;
             
-            
-            int leftSum = 0;
-            if(i>0){
-                leftSum = prefix[i-1];
-            }
-            
-            
-            int rightSum = prefix[n-1] - prefix[i];
+            int rightSum = sum - prefixSum - nums[i];
             
             result[i] = nums[i]*i - leftSum + rightSum - nums[i]*(n-i-1);
+            
+            
+            prefixSum += nums[i];
         }
         return result;
     }
