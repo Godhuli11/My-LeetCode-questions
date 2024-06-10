@@ -44,7 +44,7 @@ public:
 
             if (numOfSmaller < k) {
                 low = mid + 1;
-            } else {
+            } else { //numOfSmaller >= k
                 res = mid;
                 high = mid - 1;
             }
