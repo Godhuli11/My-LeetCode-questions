@@ -36,6 +36,7 @@ public:
         int n = matrix.size();
         int low = matrix[0][0];
         int high = matrix[n - 1][n - 1];
+        int res=-1;
 
         while (low <= high) {
             int mid = (low + high) / 2;
@@ -44,10 +45,11 @@ public:
             if (numOfSmaller < k) {
                 low = mid + 1;
             } else {
+                res = mid;
                 high = mid - 1;
             }
         }
         
-        return low;
+        return res;
     }
 };
