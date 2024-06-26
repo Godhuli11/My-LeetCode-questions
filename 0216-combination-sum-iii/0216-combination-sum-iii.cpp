@@ -1,6 +1,6 @@
 class Solution {
 public:
-    void solve(int i, int maxSize, int sum, vector<vector<int>>& ans, vector<int> temp) {
+    void solve(int i, int maxSize, int sum, vector<vector<int>>& ans, vector<int> &temp) {
         // Base case: if maxSize or sum becomes negative, return as it's invalid
         if (maxSize < 0 || sum < 0) {
             return;
