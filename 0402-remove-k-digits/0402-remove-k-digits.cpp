@@ -9,12 +9,13 @@ public:
         
         stack<int> st;
         
+        // Keep your original for loop
         for(int i = 0; i < n; i++) {
             while(!st.empty() && st.top() > num[i] - '0' && k > 0) {
-                st.pop();
+               st.pop();
                 k--;
             }
-            st.push(num[i] - '0');
+              st.push(num[i]-'0');
         }
         
         // If there are still digits to remove
@@ -47,3 +48,4 @@ public:
         return res.empty() ? "0" : res;
     }
 };
+
