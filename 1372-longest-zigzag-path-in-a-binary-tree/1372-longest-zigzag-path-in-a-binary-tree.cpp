@@ -20,9 +20,9 @@ public:
         
         if(goLeft){
             solve(root->left , false , maxPath , steps+1);
-            solve(root->right , true , maxPath , 1);
+            solve(root->right , true , maxPath , 1); // main catch figure out why 1 and not steps itself
         }else{
-            solve(root->left , false , maxPath , 1);
+            solve(root->left , false , maxPath , 1);// main catch figure out why 1 and not steps itself
             solve(root->right , true , maxPath , steps+1);
         }
         
