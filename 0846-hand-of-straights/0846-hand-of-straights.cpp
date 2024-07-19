@@ -9,7 +9,7 @@ public:
         }
 
         priority_queue<int, vector<int>, greater<int>> minHeap;
-        for (const auto& pair : count) {
+        for ( auto& pair : count) {
             minHeap.push(pair.first);
         }
 
@@ -21,9 +21,6 @@ public:
                 }
                 count[start + i]--;
                 if (count[start + i] == 0) {
-                    if (start + i != minHeap.top()) {
-                        return false;
-                    }
                     minHeap.pop();
                 }
             }
